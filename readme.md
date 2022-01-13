@@ -73,7 +73,7 @@ Webpack 5 and Module Federation, [piral](https://piral.io), [luigi](https://luig
 
 ## Develop Email Client Micro Frontends
 
-![Email Client Micro Frontends](./assets/micro-fe-app.jpg)
+![Email Client Micro Frontends](./micro-fe-app.jpg)
 
 Từ hình mô tả trên chúng ta có thể thấy rằng, ứng dụng email client của chúng ta sẽ có thể được phát triển bởi 2 team cho 2 chức năng là **mailbox** và **calendar**. Trong đó, team **calendar** có thể phát triển thêm một widget để có thể nhúng vào page của **mailbox**. Việc tạo ra các widget có thể được thực hiện thông qua Custom Elements.
 
