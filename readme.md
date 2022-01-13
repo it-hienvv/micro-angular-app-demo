@@ -404,17 +404,7 @@ Sau đó truy cập vào các địa chỉ sau:
 
 Dưới đây là kết quả có được. Chúng ta có thể chạy standalone cho từng micro apps hoặc chạy chính từ shell app.
 
-![Micro Frontends Angular](./assets/micro-frontends.gif)
-
-
-## Lời kết
-Như vậy với việc dùng Webpack 5 Module Federation chúng ta đã có thể tự tạo một ứng dụng Micro Frontend.
-
-Trong bài tiếp theo chúng ta sẽ tìm hiểu cách sử dụng Custom Elements để tạo ra các widget giúp dễ dàng nhúng vào các micro app khác.
-
-## Code sample
-
-- https://github.com/tieppt/micro-frontends-demo
+![Micro Frontends Angular](./micro-frontends.gif)
 
 ## References
 
