@@ -34,8 +34,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faMediumM, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import { ControlMessagesComponent } from './component/control-messages/control-messages.component';
-import { SpinnerComponent } from './component/spinner/spinner.component';
+import { ControlMessagesComponent } from './components/control-messages/control-messages.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   imports: [

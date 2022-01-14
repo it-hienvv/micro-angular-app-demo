@@ -6,9 +6,9 @@
 ├── package-coppy.json
 ├── package.json
 ├── projects
-│   ├── calendar
-│   └── mailbox
-├── src
+│   ├── calendar                            # Micro app 1
+│   └── mailbox                             # Micro app 2  
+├── src                                     # Host app
 │   ├── app
 │   │   ├── app-routing.module.ts
 │   │   ├── app.component.html
@@ -16,36 +16,36 @@
 │   │   ├── app.component.spec.ts
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
-│   │   ├── core
+│   │   ├── core                            # Core module
 │   │   │   ├── constants
 │   │   │   ├── core.module.ts
 │   │   │   ├── guard
 │   │   │   ├── https
 │   │   │   ├── interceptor
 │   │   │   └── service
-│   │   ├── data
+│   │   ├── data                            # Data module
 │   │   │   ├── data.module.ts
 │   │   │   ├── repo
 │   │   │   ├── schema
 │   │   │   └── service
-│   │   ├── layout
+│   │   ├── layout                          # Layout module
 │   │   │   ├── auth-layout
 │   │   │   ├── content-layout
 │   │   │   ├── footer
 │   │   │   └── nav
-│   │   ├── modules
+│   │   ├── modules                         # Các tính năng của app
 │   │   │   ├── about
 │   │   │   ├── auth
 │   │   │   ├── contact
 │   │   │   └── home
-│   │   ├── shared
+│   │   ├── shared                          # Shared module
 │   │   │   ├── component
 │   │   │   ├── directives
 │   │   │   ├── material.module.ts
 │   │   │   ├── service
 │   │   │   └── shared.module.ts
 │   │   └── types.d.ts
-│   ├── assets
+│   ├── assets                              # Asset 
 │   │   ├── i18n
 │   │   │   ├── en.json
 │   │   │   └── vi.json
@@ -58,14 +58,14 @@
 │   │   └── scss
 │   │       ├── _base.scss
 │   │       └── _colors.scss
-│   ├── environments
+│   ├── environments                       # Environment
 │   │   ├── environment.prod.ts
 │   │   └── environment.ts
 │   ├── favicon.ico
 │   ├── index.html
 │   ├── main.ts
 │   ├── polyfills.ts
-│   ├── shared
+│   ├── shared                             # Chia sẻ tài nguyên giữa các micro app
 │   │   ├── components
 │   │   │   └── components.shared.ts
 │   │   ├── data
@@ -89,8 +89,43 @@
 └── yarn.lock
 ```
 
-> Good frontend development is hard. Scaling frontend development so that many teams can work simultaneously on a large and complex product is even harder.
+# CORE
+  Phần core của hệ thống (http, auth, themes, root service, interceptor, constants).
+# DATA
+  Mọi dữ liệu truy xuất của app đều năm ở đây bao gồm remote model, local model, local store, http call data  thông qua (repo folder)
+# LAYOUT
+  Layout chứa các layout dùng chung cho toàn app như NAV, HEADER, FOOTER....:
+# Modules
+  Các page chức năng của app
 
+# SHARED
+  Chứa các thành phần dùng chung cho toàn app ví dụ như (các components (button, dropdown, input), directives, pipe)
+# Styles
+  Được sử dụng để lưu trữ các scss cho ứng dụng. Nó có thể chứa các chủ đề, Bootstrap, Angular Material ...
+# Environments
+  Chứa các biến môi trường, config, endpoint ....
+
+# Asset
+  Chứa tài nguyên của app bao gồm ảnh, i18n ...
+
+# Shared giữa các micro app
+  Chia sẻ state, layout, service, giữa các micro app với nhau như thế nào????
+
+
+## CICD như thế nào
+![CICD](./cicd.png)
+# CI 
+  - Chạy format code theo 1 chuẩn cho toàn dự án (npm run prettier)
+  - Chạy lint kiểm tra syntax (theo 1 bộ lint tiêu chuẩn cộng đồng angular đề ra, hoặc custom dựa vào bộ rule tuỳ theo dự án) (npm run lint)
+  - Chạy unit test (npm run test)
+  - Commit code (Kiểm tra commit theo rule commit (bao gồm message, prefix...), hoặc tự custom theo bộ rule)
+
+  => Tựa chung khi dev commit code (CI local sẽ chạy tất cả các step trên, nếu pass code mới được đẩy lên remote)
+# CD
+  Deploy => Docker
+## Micro Frontends
+
+> Good frontend development is hard. Scaling frontend development so that many teams can work simultaneously on a large and complex product is even harder.
 > source: [https://martinfowler.com/articles/micro-frontends.html](https://martinfowler.com/articles/micro-frontends.html)
 
 ## Micro Frontends là gì?
