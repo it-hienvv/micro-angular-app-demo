@@ -21,11 +21,11 @@
     "start:mailbox": "ng serve --project=mailbox --port 5300",
     "start:calendar": "ng serve --project=calendar --port 5400"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
+  // "husky": {
+  //   "hooks": {
+  //     // "pre-commit": "npm run lint"
+  //   }
+  // },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
