@@ -1,3 +1,94 @@
+## Structure project
+```
+├── README.md
+├── angular.json
+├── karma.conf.js
+├── package-coppy.json
+├── package.json
+├── projects
+│   ├── calendar
+│   └── mailbox
+├── src
+│   ├── app
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── core
+│   │   │   ├── constants
+│   │   │   ├── core.module.ts
+│   │   │   ├── guard
+│   │   │   ├── https
+│   │   │   ├── interceptor
+│   │   │   └── service
+│   │   ├── data
+│   │   │   ├── data.module.ts
+│   │   │   ├── repo
+│   │   │   ├── schema
+│   │   │   └── service
+│   │   ├── layout
+│   │   │   ├── auth-layout
+│   │   │   ├── content-layout
+│   │   │   ├── footer
+│   │   │   └── nav
+│   │   ├── modules
+│   │   │   ├── about
+│   │   │   ├── auth
+│   │   │   ├── contact
+│   │   │   └── home
+│   │   ├── shared
+│   │   │   ├── component
+│   │   │   ├── directives
+│   │   │   ├── material.module.ts
+│   │   │   ├── service
+│   │   │   └── shared.module.ts
+│   │   └── types.d.ts
+│   ├── assets
+│   │   ├── i18n
+│   │   │   ├── en.json
+│   │   │   └── vi.json
+│   │   ├── images
+│   │   │   ├── bg-screenshot.PNG
+│   │   │   ├── mountain.png
+│   │   │   ├── winter-photo.jpg
+│   │   │   ├── winter-photo2.jpg
+│   │   │   └── winter.jpg
+│   │   └── scss
+│   │       ├── _base.scss
+│   │       └── _colors.scss
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── shared
+│   │   ├── components
+│   │   │   └── components.shared.ts
+│   │   ├── data
+│   │   │   └── data.shared.ts
+│   │   ├── directives
+│   │   │   └── directives.share.ts
+│   │   ├── layout
+│   │   │   └── layout.shared.ts
+│   │   ├── states
+│   │   │   └── states.shared.ts
+│   │   └── styles
+│   │       ├── README.md
+│   │       └── themes
+│   ├── styles.scss
+│   └── test.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.spec.json
+├── webpack.config.js
+├── webpack.prod.config.js
+└── yarn.lock
+```
+
 > Good frontend development is hard. Scaling frontend development so that many teams can work simultaneously on a large and complex product is even harder.
 
 > source: [https://martinfowler.com/articles/micro-frontends.html](https://martinfowler.com/articles/micro-frontends.html)
