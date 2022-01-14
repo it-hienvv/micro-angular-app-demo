@@ -15,7 +15,7 @@ module.exports = {
         'mailbox': "mailbox@http://localhost:5300/remoteEntry.js",
         'calendar': "calendar@http://localhost:5400/remoteEntry.js",
       },
-      shared: ["@angular/core", "@angular/common", "@angular/router"]
+      shared: ["@angular/core", "@angular/common", "@angular/router", "@root-shared"]
     })
   ],
 };
